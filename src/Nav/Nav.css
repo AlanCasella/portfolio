@@ -1,0 +1,37 @@
+.Nav-First-Div {
+  margin: -0.8%;
+    width: 100%;
+    border-bottom-style: solid;
+  border-bottom-color: whitesmoke;
+  border-bottom-width: 0.5px;
+  position: fixed;
+  z-index: 10;
+}
+
+.Nav-First-Div a{
+    text-decoration: none;
+    color: white;
+}
+
+.Nav-Ul {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    list-style-type: none;
+    padding-bottom: 3%;
+}
+
+.Nav-Li {
+    color: white;
+    padding: 2.5% 2.5% 0px;
+    font-size: 130%;
+    font-family: "Archivo Black", sans-serif;
+}
+
+.Nav-Li:hover {
+  transform: scale(1.2);
+  transition: background-color .5s,transform .5s,-webkit-transform .5s;
+  box-shadow: -5px 5px 25px black;
+  cursor: pointer;
+  text-decoration: underline;
+}

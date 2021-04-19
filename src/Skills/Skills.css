@@ -1,0 +1,55 @@
+.Skills-First-Div {
+  width: 100.7%;
+  background-color: black;
+  background-image: linear-gradient(90deg, #000000, #797575);
+  background-size: 100%;
+  margin: 0%;
+}
+
+.Skills-H1 {
+  text-align: center;
+  font-size: 350%;
+margin: 0%;
+padding-top: 5%;
+padding-left: 5%;
+background-image: linear-gradient(45deg, #f3ec78, #af4261);
+background-size: 100%;
+background-repeat: repeat;
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; 
+-moz-background-clip: text;
+-moz-text-fill-color: transparent;
+}
+
+.Skills-Div-IMG {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-left: 5%;
+}
+
+.Skills-Div-IMG img {
+  background-color: white;
+  background-image: linear-gradient(20deg, #ffffff, #a19c9c);
+}
+
+.Skills-Div-IMG div:hover{
+  transform: scale(1.2);
+  transition: background-color .5s,transform .5s,-webkit-transform .5s;
+  background-image: linear-gradient(20deg, #ccc9c9, #696464);
+  box-shadow: -5px 5px 25px black;
+}
+
+.Skills-Div-IMG div{
+    margin: 25px;
+    padding: 25px;
+    transition: background-color .5s,transform .5s,-webkit-transform .5s;
+  }
+
+.Skills-P {
+  color: white;
+  font-size: 150%;
+  margin-top: 0%;
+}

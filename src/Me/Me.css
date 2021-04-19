@@ -1,0 +1,85 @@
+.Me-First-Div {
+    width: 100.7%;
+    background-color: black;
+background-image: linear-gradient(90deg, #000000, #797575);
+background-size: 100%;
+}
+
+.Me-Second-Div {
+  padding-top: 5%;
+}
+
+.Me-h1 {
+  font-size: 800%;
+  margin: 0%;
+  padding-top: 5%;
+  padding-left: 5%;
+background-image: linear-gradient(45deg, #f3ec78, #af4261);
+background-size: 100%;
+background-repeat: repeat;
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; 
+-moz-background-clip: text;
+-moz-text-fill-color: transparent;
+}
+
+.Me-h1-2 {
+  font-size: 800%;
+  margin: 0px;
+  padding-bottom: 2%;
+  padding-left: 3%;
+background-image: linear-gradient(45deg, #f3ec78, #af4261);
+background-size: 100%;
+background-repeat: repeat;
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; 
+-moz-background-clip: text;
+-moz-text-fill-color: transparent;
+  /* font-family: "Archivo Black", sans-serif */
+}
+
+
+.Me-P {
+  font-size: 150%;
+  text-align: center;
+  color: white;
+}
+
+.Me-A {
+  color: yellow;
+  padding: 2%;
+  border: green 5px solid;
+  margin-left: 20%;
+  background-color: black;
+  background-image: linear-gradient(90deg, #000000, #797575);
+  filter: grayscale(150%);
+}
+
+.Me-A:hover {
+  cursor: pointer;
+  background-image: linear-gradient(50deg, #fff200, #fff200);
+  color: blue;
+  box-shadow: -3px 3px 25px grey;
+}
+
+.Me-div {
+  margin-left: 30%;
+  margin-top: 5%;
+  padding-bottom: 10%;
+}
+
+.Me-Last-Div {
+  /* position: absolute;
+  left: 50%;
+  bottom: 1%; */
+  width: 40%;
+  margin-left: 60%;
+  margin-top: -25%;
+}
+
+.Me-Img {
+  width: 75%;
+  z-index: -1
+}

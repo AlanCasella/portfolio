@@ -1,0 +1,35 @@
+.Footer-Div {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    margin-top: 2%;
+    padding: 1%;
+    width: 100%;
+    margin-bottom: -10%;
+    border-top-style: solid;
+  border-top-color: whitesmoke;
+  border-top-width: 0.5px;
+}
+
+.Footer-Span {
+    color: white;
+    font-size: 200%;
+}
+
+.Footer-Icon {
+    font-size: 200%;
+    color: white;
+}
+
+.Footer-A {
+    color: white;
+    font-size: 200%;
+    cursor: pointer;
+    margin-left: 15%;
+}
+
+.Footer-Span2 {
+    color: white;
+    font-size: 200%;
+    margin-left: 15%;
+}
