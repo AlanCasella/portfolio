@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Me.css"
 import photo from "../assets/9.jpg"
-import CV from "../assets/CV Alan INGLES.pdf"
+import CV from "../assets/CV Alan.pdf"
 
 export default function Me() {
 
@@ -22,7 +22,7 @@ export default function Me() {
         y resolución de problemas de forma creativa y funcional </p>
       </div>
       <div className="Me-div">
-        <a className="Me-A" href={CV} download="CV Alan INGLES.pdf">DESCARGA MI CV</a>
+        <a className="Me-A" href={CV} download="CV Alan.pdf">DESCARGA MI CV</a>
       </div >
         
     </section>
