@@ -19,7 +19,7 @@ const SliderData = [
     {
         image: Task,
         visit: true,
-        link: "https://todo-tasks.vercel.app/",
+        link: "https://todo-tasks-dt17x6exs-alancasella.vercel.app/",
         repo: "https://github.com/AlanCasella/todo-tasks" 
     }
 ]
