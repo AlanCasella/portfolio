@@ -1,6 +1,7 @@
 import Eccommerce from "./Ecommerce.jpg";
 import Henry from "./HenryApp.jpg";
-import Task from "./List.jpg"
+import Task from "./List.jpg";
+import Ruby from "./ruby-test.jpg"
 
 const SliderData = [
     {
@@ -21,6 +22,12 @@ const SliderData = [
         visit: true,
         link: "https://todo-tasks-dt17x6exs-alancasella.vercel.app/",
         repo: "https://github.com/AlanCasella/todo-tasks" 
+    },
+    {
+        image: Ruby,
+        visit: true,
+        link: "https://alan-ruby-test.herokuapp.com/",
+        repo: "https://github.com/AlanCasella/ruby-test" 
     }
 ]
 
