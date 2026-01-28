@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<!-- TODO: 
+        - Dark mode
+         -->
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="favicon-v1.ico">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Alan Casella</title>
+    <link rel="stylesheet" href="/index.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#ffffff",
+                        "background-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            min-height: max(884px, 100dvh);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <nav class="sticky top-0 z-50 flex items-center bg-[#0f172a] p-4 justify-between border-b border-slate-800">
+        <div class="flex items-center gap-3">
+            <div class="size-10 shrink-0 overflow-hidden rounded-full border border-primary/50">
+                <div class="bg-center bg-no-repeat aspect-square bg-cover w-full h-full"
+                    style='background-image: url("./assets/me.jpg");'></div>
+            </div>
+            <div class="h-6 w-[1px] bg-slate-700"></div>
+            <h2 class="text-white text-base font-bold leading-tight tracking-tight">Alan Casella</h2>
+        </div>
+        <div class="flex items-center">
+            <button id="menu-button" class="flex items-center justify-center p-2 text-white" aria-label="Open Menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <div id="menu-dropdown"
+                class="hidden fixed right-4 top-16 w-40 bg-slate-900 border border-slate-800 rounded-xl shadow-lg overflow-hidden z-50">
+                <button data-target="Intro" class="menu-item w-full text-left px-4 py-2 text-sm text-white hover:bg-slate-800;" data-i18n="title.intro"></button>
+                <button data-target="About" class="menu-item w-full text-left px-4 py-2 text-sm text-white hover:bg-slate-800;" data-i18n="title.about"></button>
+                <button data-target="Skills" class="menu-item w-full text-left px-4 py-2 text-sm text-white hover:bg-slate-800;" data-i18n="title.skills"></button>
+                <button data-target="Projects" class="menu-item w-full text-left px-4 py-2 text-sm text-white hover:bg-slate-800;" data-i18n="title.projects"></button>
+                <button data-target="Contact" class="menu-item w-full text-left px-4 py-2 text-sm text-white hover:bg-slate-800;" data-i18n="title.contact"></button>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <section id="Intro" class="bg-white py-16 px-6">
+        <div class="max-w-xl mx-auto flex flex-col items-center text-center">
+            <h1 class="text-[#0f172a] text-3xl font-bold leading-tight mb-2" data-i18n="intro.developer"></h1>
+            <h2 class="text-primary text-sm font-bold uppercase tracking-widest mb-8" data-i18n="intro.description"></h2>
+            <div class="w-32 aspect-square rounded-2xl overflow-hidden shadow-lg mb-8 border border-slate-100">
+                <div class="w-full h-full bg-center bg-no-repeat bg-cover"
+                    style='background-image: url("./assets/me.jpg");'></div>
+            </div>
+            <p class="intro-expertise" data-i18n="intro.expertise"></p>
+            <div class="intro-tech">
+                <img src="/assets/node.png" alt="Node.js" />
+                <img src="/assets/aws.png" alt="AWS" />
+                <img src="/assets/next.png" alt="Next.js" />
+                <img src="/assets/mysql.png" alt="MySQL" />
+                <img src="/assets/ia-prompt.png" alt="IA Prompting" />
+            </div>
+        </div>
+    </section>
+    <section id="About" class="bg-[#0f172a] py-16 px-6">
+        <div class="max-w-xl mx-auto flex flex-col items-center text-center">
+            <h2 class="text-white text-2xl font-bold mb-6" data-i18n="about.title"></h2>
+            <div class="flex flex-col items-center gap-8">
+                <p class="text-white text-base leading-relaxed opacity-90 max-w-sm" data-i18n="about.description"></p>
+                <button
+                    id="resume-button" class="flex items-center justify-center gap-2 border border-slate-500 rounded-lg px-6 h-12 text-white w-fit hover:bg-slate-800 transition-colors">
+                    <span class="material-symbols-outlined">download</span>
+                    <span class="font-medium" data-i18n="about.resume"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section id="Skills" class="skills">
+        <div class="max-w-xl mx-auto flex flex-col items-center text-center">
+            <h1 class="text-[#0f172a] text-3xl font-bold leading-tight mb-8" data-i18n="skills.title"></h1>
+        </div>
+        <div class="skills-container">
+
+            <!-- CARD 1 -->
+            <div class="skill-card">
+                <img class="skill-icon" src="/assets/front-end.png" alt="Frontend icon">
+
+                <h3 class="skill-title" data-i18n="skills.front"></h3>
+
+                <div class="skill-tech">
+                    <div class="tech-pill">
+                        <img src="/assets/html.png" alt="HTML">
+                        <span>HTML</span>
+                    </div>
+                    <div class="tech-pill">
+                        <img src="/assets/css.png" alt="CSS">
+                        <span>CSS</span>
+                    </div>
+                    <div class="tech-pill">
+                        <img src="/assets/js.png" alt="JavaScript">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-pill">
+                        <img src="/assets/php.png" alt="PHP">
+                        <span>PHP</span>
+                    </div>
+                    <div class="tech-pill">
+                        <img src="/assets/typescript.png" alt="Typescript">
+                        <span>Typescript</span>
+                    </div>
+                    <div class="tech-pill">
+                        <img src="/assets/react.png" alt="React">
+                        <span>React</span>
+                    </div>
+                    <div class="tech-pill">
+                        <img src="/assets/redux.png" alt="Redux">
+                        <span>Redux</span>
+                    </div>
+                    <div class="tech-pill">
+                        <img src="/assets/next.png" alt="NextJS">
+                        <span>NextJS</span>
+                    </div>
+                    <div class="tech-pill">
+                        <img src="/assets/tailwind.png" alt="Tailwind">
+                        <span>Tailwind</span>
+                    </div>
+                    <div class="tech-pill">
+                        <img src="/assets/material-design.png" alt="Material Design">
+                        <span>Material Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-separator"></div>
+
+            <!-- CARD 2 -->
+            <div class="skill-card">
+                <img class="skill-icon" src="/assets/back-end.png" alt="Backend icon">
+
+                <h3 class="skill-title" data-i18n="skills.back"></h3>
+
+                <div class="skill-tech">
+                    <div class="tech-pill">
+                        <img src="/assets/node.png" alt="NodeJS">
+                        <span>NodeJS</span>
+                    </div>
+                    <div class="tech-pill">
+                        <img src="/assets/php.png" alt="PHP">
+                        <span>PHP</span>
+                    </div>
+                    <div class="tech-pill">
+                        <img src="/assets/typescript.png" alt="Typescript">
+                        <span>Typescript</span>
+                    </div>
+                    <div class="tech-pill">
+                        <img src="/assets/python.png" alt="Python">
+                        <span>Python</span>
+                    </div>
+                    <div class="tech-pill">
+                        <img src="/assets/codeigniter.png" alt="CodeIgniter">
+                        <span>CodeIgniter</span>
+                    </div>
+                    <div class="tech-pill">
+                        <img src="/assets/mysql.png" alt="MySQL">
+                        <span>MySQL</span>
+                    </div>
+                    <div class="tech-pill">
+                        <img src="/assets/postgres.png" alt="PostgreSQL">
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="tech-pill">
+                        <img src="/assets/prisma.png" alt="Prisma">
+                        <span>Prisma</span>
+                    </div>
+                    <div class="tech-pill">
+                        <img src="/assets/mongodb.png" alt="MongoDB">
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-separator"></div>
+
+            <!-- CARD 3 -->
+            <div class="skill-card">
+                <img class="skill-icon" src="/assets/devops.png" alt="DevOps icon">
+
+                <h3 class="skill-title" data-i18n="skills.devops"></h3>
+
+                <div class="skill-tech">
+                    <div class="tech-pill">
+                        <img src="/assets/docker.png" alt="Docker">
+                        <span>Docker</span>
+                    </div>
+                    <div class="tech-pill">
+                        <img src="/assets/aws.png" alt="AWS">
+                        <span>AWS</span>
+                    </div>
+                    <div class="tech-pill">
+                        <img src="/assets/github.png" alt="GitHub">
+                        <span>GitHub</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="Projects" class="bg-[#0f172a] py-16 px-6 overflow-hidden">
+        <div class="max-w-xl mx-auto">
+            <h2 class="text-white text-2xl font-bold mb-8 text-center" data-i18n="projects.title"></h2>
+            <div id="carrousel"
+                class="flex overflow-x-auto gap-6 hide-scrollbar snap-x snap-mandatory pb-4 scroll-smooth">
+                <div class="carrousel-item min-w-full snap-center bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden">
+                    <div class="relative w-full aspect-video">
+                        <div class="w-full h-full bg-center bg-no-repeat bg-cover"
+                            style='background-image: url("./assets/Ecommerce.jpg");'>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-between px-4">
+                            <button data-action="prev" class="bg-black/40 text-white rounded-full p-1"><span
+                                    class="material-symbols-outlined">chevron_left</span></button>
+                            <button data-action="next" class="bg-black/40 text-white rounded-full p-1"><span
+                                    class="material-symbols-outlined">chevron_right</span></button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-white font-bold text-sm" data-i18n="projects.ecomerce.title">aaaaa</h3>
+                            <div class="flex gap-2">
+                                <!-- <button
+                                    class="flex items-center gap-1 px-3 py-1.5 bg-slate-800 rounded-md text-[10px] text-white">
+                                    <span class="material-symbols-outlined text-[14px]">download</span> Visit
+                                </button> -->
+                                <button
+                                    class="flex items-center gap-1 px-3 py-1.5 bg-primary rounded-md text-[10px] text-white">
+                                    <span class="material-symbols-outlined text-[14px]">share</span> Share
+                                </button>
+                            </div>
+                        </div>
+                        <hr class="border-slate-800 mb-4" />
+                        <h4 class="text-primary text-[10px] font-bold uppercase tracking-widest mb-1" data-i18n="projects.ecomerce.name"></h4>
+                        <p class="text-slate-400 text-sm mb-4" data-i18n="projects.ecomerce.description"></p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech1"></span>
+                            <span
+                                class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech2"></span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech3">
+                                Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carrousel-item min-w-full snap-center bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden">
+                    <div class="relative w-full aspect-video">
+                        <div class="w-full h-full bg-center bg-no-repeat bg-cover"
+                            style='background-image: url("./assets/Ecommerce.jpg");'>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-between px-4">
+                            <button data-action="prev" class="bg-black/40 text-white rounded-full p-1"><span
+                                    class="material-symbols-outlined">chevron_left</span></button>
+                            <button data-action="next" class="bg-black/40 text-white rounded-full p-1"><span
+                                    class="material-symbols-outlined">chevron_right</span></button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-white font-bold text-sm" data-i18n="projects.ecomerce.title">aaaaa</h3>
+                            <div class="flex gap-2">
+                                <!-- <button
+                                    class="flex items-center gap-1 px-3 py-1.5 bg-slate-800 rounded-md text-[10px] text-white">
+                                    <span class="material-symbols-outlined text-[14px]">download</span> Visit
+                                </button> -->
+                                <button
+                                    class="flex items-center gap-1 px-3 py-1.5 bg-primary rounded-md text-[10px] text-white">
+                                    <span class="material-symbols-outlined text-[14px]">share</span> Share
+                                </button>
+                            </div>
+                        </div>
+                        <hr class="border-slate-800 mb-4" />
+                        <h4 class="text-primary text-[10px] font-bold uppercase tracking-widest mb-1" data-i18n="projects.ecomerce.name"></h4>
+                        <p class="text-slate-400 text-sm mb-4" data-i18n="projects.ecomerce.description"></p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech1"></span>
+                            <span
+                                class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech2"></span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech3">
+                                Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carrousel-item min-w-full snap-center bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden">
+                    <div class="relative w-full aspect-video">
+                        <div class="w-full h-full bg-center bg-no-repeat bg-cover"
+                            style='background-image: url("./assets/Ecommerce.jpg");'>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-between px-4">
+                            <button data-action="prev" class="bg-black/40 text-white rounded-full p-1"><span
+                                    class="material-symbols-outlined">chevron_left</span></button>
+                            <button data-action="next" class="bg-black/40 text-white rounded-full p-1"><span
+                                    class="material-symbols-outlined">chevron_right</span></button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-white font-bold text-sm" data-i18n="projects.ecomerce.title">aaaaa</h3>
+                            <div class="flex gap-2">
+                                <!-- <button
+                                    class="flex items-center gap-1 px-3 py-1.5 bg-slate-800 rounded-md text-[10px] text-white">
+                                    <span class="material-symbols-outlined text-[14px]">download</span> Visit
+                                </button> -->
+                                <button
+                                    class="flex items-center gap-1 px-3 py-1.5 bg-primary rounded-md text-[10px] text-white">
+                                    <span class="material-symbols-outlined text-[14px]">share</span> Share
+                                </button>
+                            </div>
+                        </div>
+                        <hr class="border-slate-800 mb-4" />
+                        <h4 class="text-primary text-[10px] font-bold uppercase tracking-widest mb-1" data-i18n="projects.ecomerce.name"></h4>
+                        <p class="text-slate-400 text-sm mb-4" data-i18n="projects.ecomerce.description"></p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech1"></span>
+                            <span
+                                class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech2"></span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech3">
+                                Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carrousel-item min-w-full snap-center bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden">
+                    <div class="relative w-full aspect-video">
+                        <div class="w-full h-full bg-center bg-no-repeat bg-cover"
+                            style='background-image: url("./assets/Ecommerce.jpg");'>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-between px-4">
+                            <button data-action="prev" class="bg-black/40 text-white rounded-full p-1"><span
+                                    class="material-symbols-outlined">chevron_left</span></button>
+                            <button data-action="next" class="bg-black/40 text-white rounded-full p-1"><span
+                                    class="material-symbols-outlined">chevron_right</span></button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-white font-bold text-sm" data-i18n="projects.ecomerce.title">aaaaa</h3>
+                            <div class="flex gap-2">
+                                <!-- <button
+                                    class="flex items-center gap-1 px-3 py-1.5 bg-slate-800 rounded-md text-[10px] text-white">
+                                    <span class="material-symbols-outlined text-[14px]">download</span> Visit
+                                </button> -->
+                                <button
+                                    class="flex items-center gap-1 px-3 py-1.5 bg-primary rounded-md text-[10px] text-white">
+                                    <span class="material-symbols-outlined text-[14px]">share</span> Share
+                                </button>
+                            </div>
+                        </div>
+                        <hr class="border-slate-800 mb-4" />
+                        <h4 class="text-primary text-[10px] font-bold uppercase tracking-widest mb-1" data-i18n="projects.ecomerce.name"></h4>
+                        <p class="text-slate-400 text-sm mb-4" data-i18n="projects.ecomerce.description"></p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech1"></span>
+                            <span
+                                class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech2"></span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech3">
+                                Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carrousel-item min-w-full snap-center bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden">
+                    <div class="relative w-full aspect-video">
+                        <div class="w-full h-full bg-center bg-no-repeat bg-cover"
+                            style='background-image: url("./assets/Ecommerce.jpg");'>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-between px-4">
+                            <button data-action="prev" class="bg-black/40 text-white rounded-full p-1"><span
+                                    class="material-symbols-outlined">chevron_left</span></button>
+                            <button data-action="next" class="bg-black/40 text-white rounded-full p-1"><span
+                                    class="material-symbols-outlined">chevron_right</span></button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-white font-bold text-sm" data-i18n="projects.ecomerce.title">aaaaa</h3>
+                            <div class="flex gap-2">
+                                <!-- <button
+                                    class="flex items-center gap-1 px-3 py-1.5 bg-slate-800 rounded-md text-[10px] text-white">
+                                    <span class="material-symbols-outlined text-[14px]">download</span> Visit
+                                </button> -->
+                                <button
+                                    class="flex items-center gap-1 px-3 py-1.5 bg-primary rounded-md text-[10px] text-white">
+                                    <span class="material-symbols-outlined text-[14px]">share</span> Share
+                                </button>
+                            </div>
+                        </div>
+                        <hr class="border-slate-800 mb-4" />
+                        <h4 class="text-primary text-[10px] font-bold uppercase tracking-widest mb-1" data-i18n="projects.ecomerce.name"></h4>
+                        <p class="text-slate-400 text-sm mb-4" data-i18n="projects.ecomerce.description"></p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech1"></span>
+                            <span
+                                class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech2"></span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech3">
+                                Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="carousel-dots" class="flex justify-center gap-2 mt-4">
+                <button class="dot w-2 h-2 rounded-full bg-primary" data-index="0"></button>
+                <button class="dot w-2 h-2 rounded-full bg-slate-700" data-index="1"></button>
+                <button class="dot w-2 h-2 rounded-full bg-slate-700" data-index="2"></button>
+                <button class="dot w-2 h-2 rounded-full bg-slate-700" data-index="3"></button>
+                <button class="dot w-2 h-2 rounded-full bg-slate-700" data-index="4"></button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white py-16 px-6">
+        <div class="max-w-xl mx-auto">
+            <div class="flex flex-col items-center gap-8">
+                <div class="flex flex-col items-center gap-4 w-full">
+                    <div class="flex items-center gap-3 text-[#0f172a] hover:text-primary transition-colors">
+                        <div
+                            class="size-10 flex items-center justify-center border border-slate-200 rounded-full shrink-0">
+                            <span class="material-symbols-outlined text-slate-400">mail</span>
+                        </div>
+                        <a class="text-lg font-bold"
+                            href="mailto:alan.daniel.casella@gmail.com">alan.daniel.casella@gmail.com</a>
+                    </div>
+                    <div class="flex items-center gap-3 text-[#0f172a]">
+                        <div
+                            class="size-10 flex items-center justify-center border border-slate-200 rounded-full shrink-0">
+                            <span class="material-symbols-outlined text-slate-400">call</span>
+                        </div>
+                        <span class="text-lg font-bold">+54 (11) 4091-2932</span>
+                    </div>
+                </div>
+                <div class="flex gap-4 w-full">
+                    <a class="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-slate-50 border border-slate-200 rounded-xl text-[#0f172a] font-bold text-sm transition-all hover:bg-slate-100 active:scale-95 shadow-sm"
+                        target="_blank" href="https://www.linkedin.com/in/alancasella/">
+                        <span class="material-symbols-outlined text-lg">link</span>
+                        LinkedIn
+                    </a>
+                    <a class="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-[#0f172a] text-white rounded-xl font-bold text-sm transition-all hover:bg-slate-800 active:scale-95 shadow-sm"
+                        target="_blank" href="https://github.com/AlanCasella">
+                        <span class="material-symbols-outlined text-lg">code</span>
+                        GitHub
+                    </a>
+                </div>
+                <div class="pt-12 border-t border-slate-100 w-full text-center">
+                    <p class="text-slate-400 text-xs">© 2026 Alan Casella. Built with precision and passion.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/js/script.js"></script>
+</body>
+
+</html>

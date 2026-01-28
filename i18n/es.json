@@ -1,0 +1,67 @@
+{
+    "title": {
+        "intro": "Intro",
+        "about": "Acerca de",
+        "skills": "Habilidades",
+        "projects": "Proyectos",
+        "contact": "Contacto"
+    },
+    "intro": {
+        "developer": "Desarrollador FullStack",
+        "description": "Transformo las inquietudes de los usuarios en soluciones efectivas",
+        "expertise": "Competencias:"
+    },
+    "about": {
+        "title": "Hola, soy Alan Casella. Encantado de conocerte 👋🏻",
+        "description": "Experiencia de 4+ años construyendo aplicaciones end-to-end, optimizando infraestructura y resolviendo bugs complejos en entornos productivos. Enfoque en performance, documentación y experiencia de usuario. Bilingue (Inglés C2)",
+        "resume": "Resume"
+    },
+    "skills": {
+        "title": "Tecnologías con las que he trabajado",
+        "front": "Desarrollo Front-end",
+        "back": "Back-end & Bases de Datos",
+        "devops": "DevOps"
+    },
+    "projects": {
+        "title": "Mis proyectos",
+        "ecomerce": {
+            "title": "Mi primer proyecto",
+            "name": "E-commerce Patagonia",
+            "description": "App completada en 1 mes en un equipo de 4 estudiantes. Desplegada en vercel y base de datos en heroku. Permite a los usuarios navegar productos, agregarlos al carrito y simular pago de las compras.",
+            "tech1": "React",
+            "tech2": "Redux",
+            "tech3": "PostgreSQL",
+            "tech4": "Bcrypt",
+            "tech5": "Passport",
+            "tech6": "Mailgun",
+            "tech7": "JsonWebToken"
+        },
+        "henryapp": {
+            "title": "Henry App proyecto final",
+            "name": "Henry manager",
+            "description": "App final como estudiante. Permite a los administradores gestionar asistencia, cursos, estudiantes y profesores. Incluye autenticación y roles de usuario",
+            "tech1": "Typescript",
+            "tech2": "React",
+            "tech3": "Redux",
+            "tech4": "MongoDB",
+            "tech5": "API middleware",
+            "tech6": "Multer"
+        },
+        "listnext": {
+            "title": "Gestor de tareas",
+            "name": "Nextjs ToDo List",
+            "description": "Desplegado en Vercel en 1 semana usando una base de datos en la nube como ejercicio técnico.",
+            "tech1": "NextJS",
+            "tech2": "MongoDB",
+            "tech3": "Material Design"
+        },
+        "googledb": {
+            "title": "My first project",
+            "name": "E-commerce Patagonia",
+            "description": "Una descripcion",
+            "tech1": "aa",
+            "tech2": "bb",
+            "tech3": "cc"
+        }
+    }
+}
