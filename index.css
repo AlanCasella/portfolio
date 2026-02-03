@@ -1,0 +1,336 @@
+/* Reset mínimo */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  padding-top: 64px; /* IMPORTANTE: evita que el navbar tape el contenido */
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 16px;
+
+  background-color: #0f172a; /* azul oscuro elegante */
+  color: #f8fafc;
+
+  z-index: 1000;
+}
+
+/* LEFT */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.navbar-separator {
+  width: 1px;
+  height: 24px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.navbar-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* RIGHT */
+.navbar-menu {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.intro {
+  min-height: calc(100vh - 64px); /* resta el navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px 16px;
+  background-color: #ffffff;
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  max-width: 480px;
+}
+
+/* Título */
+.intro-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Subtítulo */
+.intro-subtitle {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* Avatar */
+.intro-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Expertise */
+.intro-expertise {
+  margin-top: 8px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* Tech logos */
+.intro-tech {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.intro-tech img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .intro-content {
+    max-width: 600px;
+  }
+
+  .intro-title {
+    font-size: 2.5rem;
+  }
+
+  .intro-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .intro-avatar {
+    width: 180px;
+    height: 180px;
+  }
+
+  .intro-tech img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.about {
+  padding: 64px 16px;
+  background-color: #f8fafc;
+}
+
+.about-content {
+  max-width: 640px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  text-align: center;
+}
+
+/* Título */
+.about-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Texto largo */
+.about-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #475569;
+}
+
+/* Actions */
+.about-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.resume-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 20px;
+  border-radius: 999px;
+
+  background-color: grey;
+  color: #ffffff;
+
+  border: none;
+  cursor: pointer;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* ICONO */
+.resume-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+}
+
+.resume-button:hover {
+  background-color: #1e293b;
+}
+
+.resume-button:active {
+  transform: scale(0.97);
+}
+
+
+@media (min-width: 768px) {
+  .about {
+    padding: 96px 24px;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-text {
+    font-size: 1.05rem;
+  }
+}
+
+.skills {
+  padding: 64px 16px;
+  background-color: #ffffff;
+}
+
+.skills-container {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* CARD */
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+/* ICONO GRANDE */
+.skill-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+/* TITULO */
+.skill-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* SUBTEXTO */
+.skill-subtitle {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+/* TECNOLOGIAS */
+.skill-tech {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* PILL */
+.tech-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 10px;
+  border-radius: 8px;
+
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+
+  font-size: 0.85rem;
+  color: #0f172a;
+}
+
+.tech-pill img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+/* SEPARADOR MOBILE (HORIZONTAL) */
+.skill-separator {
+  width: 100%;
+  height: 1px;
+  background-color: #e2e8f0;
+}
+
+@media (min-width: 900px) {
+  .skills-container {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .skill-card {
+    flex: 1;
+    padding: 0 32px;
+  }
+
+  /* separador vertical */
+  .skill-separator {
+    width: 1px;
+    height: auto;
+  }
+}
