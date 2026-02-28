@@ -56,12 +56,13 @@
             "tech3": "Material Design"
         },
         "googledb": {
-            "title": "My first project",
-            "name": "E-commerce Patagonia",
-            "description": "Una descripcion",
-            "tech1": "aa",
-            "tech2": "bb",
-            "tech3": "cc"
+            "title": "Minimalist Web App",
+            "name": "Google Sheet DB",
+            "description": "App created with minimal cost and requirements. Uses Google Sheets as a database and supports 2 lengauges. App can be used for internal information or external use.",
+            "tech1": "Html",
+            "tech2": "Css",
+            "tech3": "Javascript",
+            "tech4": "Tailwind"
         }
     }
 }

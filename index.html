@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<!-- TODO: 
-        - Dark mode
-         -->
 <html class="dark" lang="en">
 
 <head>
@@ -23,7 +20,7 @@
                 extend: {
                     colors: {
                         "primary": "#137fec",
-                        "background-light": "#ffffff",
+                        "background-light": "#483D8B",
                         "background-dark": "#0f172a",
                     },
                     fontFamily: {
@@ -76,11 +73,21 @@
             </button>
             <div id="menu-dropdown"
                 class="hidden fixed right-4 top-16 w-40 bg-slate-900 border border-slate-800 rounded-xl shadow-lg overflow-hidden z-50">
-                <button data-target="Intro" class="menu-item w-full text-left px-4 py-2 text-sm text-white hover:bg-slate-800;" data-i18n="title.intro"></button>
-                <button data-target="About" class="menu-item w-full text-left px-4 py-2 text-sm text-white hover:bg-slate-800;" data-i18n="title.about"></button>
-                <button data-target="Skills" class="menu-item w-full text-left px-4 py-2 text-sm text-white hover:bg-slate-800;" data-i18n="title.skills"></button>
-                <button data-target="Projects" class="menu-item w-full text-left px-4 py-2 text-sm text-white hover:bg-slate-800;" data-i18n="title.projects"></button>
-                <button data-target="Contact" class="menu-item w-full text-left px-4 py-2 text-sm text-white hover:bg-slate-800;" data-i18n="title.contact"></button>
+                <button data-target="Intro"
+                    class="menu-item w-full text-left px-4 py-2 text-sm text-white hover:bg-slate-800;"
+                    data-i18n="title.intro"></button>
+                <button data-target="About"
+                    class="menu-item w-full text-left px-4 py-2 text-sm text-white hover:bg-slate-800;"
+                    data-i18n="title.about"></button>
+                <button data-target="Skills"
+                    class="menu-item w-full text-left px-4 py-2 text-sm text-white hover:bg-slate-800;"
+                    data-i18n="title.skills"></button>
+                <button data-target="Projects"
+                    class="menu-item w-full text-left px-4 py-2 text-sm text-white hover:bg-slate-800;"
+                    data-i18n="title.projects"></button>
+                <button data-target="Contact"
+                    class="menu-item w-full text-left px-4 py-2 text-sm text-white hover:bg-slate-800;"
+                    data-i18n="title.contact"></button>
             </div>
         </div>
         </div>
@@ -88,7 +95,8 @@
     <section id="Intro" class="bg-white py-16 px-6">
         <div class="max-w-xl mx-auto flex flex-col items-center text-center">
             <h1 class="text-[#0f172a] text-3xl font-bold leading-tight mb-2" data-i18n="intro.developer"></h1>
-            <h2 class="text-primary text-sm font-bold uppercase tracking-widest mb-8" data-i18n="intro.description"></h2>
+            <h2 class="text-primary text-sm font-bold uppercase tracking-widest mb-8" data-i18n="intro.description">
+            </h2>
             <div class="w-32 aspect-square rounded-2xl overflow-hidden shadow-lg mb-8 border border-slate-100">
                 <div class="w-full h-full bg-center bg-no-repeat bg-cover"
                     style='background-image: url("./assets/me.jpg");'></div>
@@ -108,8 +116,8 @@
             <h2 class="text-white text-2xl font-bold mb-6" data-i18n="about.title"></h2>
             <div class="flex flex-col items-center gap-8">
                 <p class="text-white text-base leading-relaxed opacity-90 max-w-sm" data-i18n="about.description"></p>
-                <button
-                    id="resume-button" class="flex items-center justify-center gap-2 border border-slate-500 rounded-lg px-6 h-12 text-white w-fit hover:bg-slate-800 transition-colors">
+                <button id="resume-button"
+                    class="flex items-center justify-center gap-2 border border-slate-500 rounded-lg px-6 h-12 text-white w-fit hover:bg-slate-800 transition-colors">
                     <span class="material-symbols-outlined">download</span>
                     <span class="font-medium" data-i18n="about.resume"></span>
                 </button>
@@ -241,6 +249,10 @@
                         <img src="/assets/github.png" alt="GitHub">
                         <span>GitHub</span>
                     </div>
+                    <div class="tech-pill">
+                        <img src="/assets/terraform.png" alt="Terraform">
+                        <span>Terraform</span>
+                    </div>
                 </div>
             </div>
 
@@ -251,7 +263,8 @@
             <h2 class="text-white text-2xl font-bold mb-8 text-center" data-i18n="projects.title"></h2>
             <div id="carrousel"
                 class="flex overflow-x-auto gap-6 hide-scrollbar snap-x snap-mandatory pb-4 scroll-smooth">
-                <div class="carrousel-item min-w-full snap-center bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden">
+                <div
+                    class="carrousel-item min-w-full snap-center bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden">
                     <div class="relative w-full aspect-video">
                         <div class="w-full h-full bg-center bg-no-repeat bg-cover"
                             style='background-image: url("./assets/Ecommerce.jpg");'>
@@ -265,35 +278,124 @@
                     </div>
                     <div class="p-5">
                         <div class="flex justify-between items-center mb-4">
-                            <h3 class="text-white font-bold text-sm" data-i18n="projects.ecomerce.title">aaaaa</h3>
+                            <h3 class="text-white font-bold text-sm" data-i18n="projects.ecomerce.title"></h3>
                             <div class="flex gap-2">
-                                <!-- <button
-                                    class="flex items-center gap-1 px-3 py-1.5 bg-slate-800 rounded-md text-[10px] text-white">
-                                    <span class="material-symbols-outlined text-[14px]">download</span> Visit
-                                </button> -->
-                                <button
-                                    class="flex items-center gap-1 px-3 py-1.5 bg-primary rounded-md text-[10px] text-white">
-                                    <span class="material-symbols-outlined text-[14px]">share</span> Share
-                                </button>
+                                <a target="_blank" href="https://github.com/AlanCasella/ecommerce_patagonia"
+                                    class="flex items-center gap-1 px-3 py-1.5 bg-background-light rounded-md text-[10px] text-white">
+                                    <span class="material-symbols-outlined text-[14px]">gite</span> GitHub
+                                </a>
                             </div>
                         </div>
                         <hr class="border-slate-800 mb-4" />
-                        <h4 class="text-primary text-[10px] font-bold uppercase tracking-widest mb-1" data-i18n="projects.ecomerce.name"></h4>
+                        <h4 class="text-primary text-[10px] font-bold uppercase tracking-widest mb-1"
+                            data-i18n="projects.ecomerce.name"></h4>
                         <p class="text-slate-400 text-sm mb-4" data-i18n="projects.ecomerce.description"></p>
                         <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech1"></span>
-                            <span
-                                class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech2"></span>
-                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech3">
-                                Design</span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300"
+                                data-i18n="projects.ecomerce.tech1"></span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300"
+                                data-i18n="projects.ecomerce.tech2"></span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300"
+                                data-i18n="projects.ecomerce.tech3"></span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300"
+                                data-i18n="projects.ecomerce.tech4"></span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300"
+                                data-i18n="projects.ecomerce.tech5"></span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300"
+                                data-i18n="projects.ecomerce.tech6"></span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300"
+                                data-i18n="projects.ecomerce.tech7"></span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="carrousel-item min-w-full snap-center bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden">
+                    <div class="relative w-full aspect-video">
+                        <div class="w-full h-full bg-center bg-no-repeat bg-cover"
+                            style='background-image: url("./assets/HenryApp.jpg");'>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-between px-4">
+                            <button data-action="prev" class="bg-black/40 text-white rounded-full p-1"><span
+                                    class="material-symbols-outlined">chevron_left</span></button>
+                            <button data-action="next" class="bg-black/40 text-white rounded-full p-1"><span
+                                    class="material-symbols-outlined">chevron_right</span></button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-white font-bold text-sm" data-i18n="projects.henryapp.title"></h3>
+                            <div class="flex gap-2">
+                                <a target="_blank" href="https://github.com/AlanCasella/Proyecto-Final-ft07-04"
+                                    class="flex items-center gap-1 px-3 py-1.5 bg-background-light rounded-md text-[10px] text-white">
+                                    <span class="material-symbols-outlined text-[14px]">gite</span> GitHub
+                                </a>
+                            </div>
+                        </div>
+                        <hr class="border-slate-800 mb-4" />
+                        <h4 class="text-primary text-[10px] font-bold uppercase tracking-widest mb-1"
+                            data-i18n="projects.henryapp.name"></h4>
+                        <p class="text-slate-400 text-sm mb-4" data-i18n="projects.henryapp.description"></p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300"
+                                data-i18n="projects.henryapp.tech1"></span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300"
+                                data-i18n="projects.henryapp.tech2"></span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300"
+                                data-i18n="projects.henryapp.tech3"></span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300"
+                                data-i18n="projects.henryapp.tech4"></span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300"
+                                data-i18n="projects.henryapp.tech5"></span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300"
+                                data-i18n="projects.henryapp.tech6"></span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="carrousel-item min-w-full snap-center bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden">
+                    <div class="relative w-full aspect-video">
+                        <div class="w-full h-full bg-center bg-no-repeat bg-cover"
+                            style='background-image: url("./assets/List.jpg");'>
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-between px-4">
+                            <button data-action="prev" class="bg-black/40 text-white rounded-full p-1"><span
+                                    class="material-symbols-outlined">chevron_left</span></button>
+                            <button data-action="next" class="bg-black/40 text-white rounded-full p-1"><span
+                                    class="material-symbols-outlined">chevron_right</span></button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-white font-bold text-sm" data-i18n="projects.listnext.title"></h3>
+                            <div class="flex gap-2">
+                                <a target="_blank" href="https://todo-tasks.vercel.app/"
+                                    class="flex items-center gap-1 px-3 py-1.5 bg-background-light rounded-md text-[10px] text-white">
+                                    <span class="material-symbols-outlined text-[14px]">open_in_new</span> Visit
+                                </a>
+                                <a target="_blank" href="https://github.com/AlanCasella/todo-tasks"
+                                    class="flex items-center gap-1 px-3 py-1.5 bg-background-light rounded-md text-[10px] text-white">
+                                    <span class="material-symbols-outlined text-[14px]">gite</span> GitHub
+                                </a>
+                            </div>
+                        </div>
+                        <hr class="border-slate-800 mb-4" />
+                        <h4 class="text-primary text-[10px] font-bold uppercase tracking-widest mb-1"
+                            data-i18n="projects.listnext.name"></h4>
+                        <p class="text-slate-400 text-sm mb-4" data-i18n="projects.listnext.description"></p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300"
+                                data-i18n="projects.listnext.tech1"></span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300"
+                                data-i18n="projects.listnext.tech2"></span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300"
+                                data-i18n="projects.listnext.tech3"></span>
                         </div>
                     </div>
                 </div>
                 <div class="carrousel-item min-w-full snap-center bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden">
                     <div class="relative w-full aspect-video">
                         <div class="w-full h-full bg-center bg-no-repeat bg-cover"
-                            style='background-image: url("./assets/Ecommerce.jpg");'>
+                            style='background-image: url("./assets/google_db.jpg");'>
                         </div>
                         <div class="absolute inset-0 flex items-center justify-between px-4">
                             <button data-action="prev" class="bg-black/40 text-white rounded-full p-1"><span
@@ -304,145 +406,26 @@
                     </div>
                     <div class="p-5">
                         <div class="flex justify-between items-center mb-4">
-                            <h3 class="text-white font-bold text-sm" data-i18n="projects.ecomerce.title">aaaaa</h3>
+                            <h3 class="text-white font-bold text-sm" data-i18n="projects.googledb.title"></h3>
                             <div class="flex gap-2">
-                                <!-- <button
-                                    class="flex items-center gap-1 px-3 py-1.5 bg-slate-800 rounded-md text-[10px] text-white">
-                                    <span class="material-symbols-outlined text-[14px]">download</span> Visit
-                                </button> -->
-                                <button
-                                    class="flex items-center gap-1 px-3 py-1.5 bg-primary rounded-md text-[10px] text-white">
-                                    <span class="material-symbols-outlined text-[14px]">share</span> Share
-                                </button>
+                                <a target="_blank" href="https://celebrated-kataifi-a1226a.netlify.app/"
+                                    class="flex items-center gap-1 px-3 py-1.5 bg-background-light rounded-md text-[10px] text-white">
+                                    <span class="material-symbols-outlined text-[14px]">open_in_new</span> Visit
+                                </a>
+                                <a target="_blank" href="https://github.com/AlanCasella/google-db-test"
+                                    class="flex items-center gap-1 px-3 py-1.5 bg-background-light rounded-md text-[10px] text-white">
+                                    <span class="material-symbols-outlined text-[14px]">gite</span> GitHub
+                                </a>
                             </div>
                         </div>
                         <hr class="border-slate-800 mb-4" />
-                        <h4 class="text-primary text-[10px] font-bold uppercase tracking-widest mb-1" data-i18n="projects.ecomerce.name"></h4>
-                        <p class="text-slate-400 text-sm mb-4" data-i18n="projects.ecomerce.description"></p>
+                        <h4 class="text-primary text-[10px] font-bold uppercase tracking-widest mb-1" data-i18n="projects.googledb.name"></h4>
+                        <p class="text-slate-400 text-sm mb-4" data-i18n="projects.googledb.description"></p>
                         <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech1"></span>
-                            <span
-                                class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech2"></span>
-                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech3">
-                                Design</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="carrousel-item min-w-full snap-center bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden">
-                    <div class="relative w-full aspect-video">
-                        <div class="w-full h-full bg-center bg-no-repeat bg-cover"
-                            style='background-image: url("./assets/Ecommerce.jpg");'>
-                        </div>
-                        <div class="absolute inset-0 flex items-center justify-between px-4">
-                            <button data-action="prev" class="bg-black/40 text-white rounded-full p-1"><span
-                                    class="material-symbols-outlined">chevron_left</span></button>
-                            <button data-action="next" class="bg-black/40 text-white rounded-full p-1"><span
-                                    class="material-symbols-outlined">chevron_right</span></button>
-                        </div>
-                    </div>
-                    <div class="p-5">
-                        <div class="flex justify-between items-center mb-4">
-                            <h3 class="text-white font-bold text-sm" data-i18n="projects.ecomerce.title">aaaaa</h3>
-                            <div class="flex gap-2">
-                                <!-- <button
-                                    class="flex items-center gap-1 px-3 py-1.5 bg-slate-800 rounded-md text-[10px] text-white">
-                                    <span class="material-symbols-outlined text-[14px]">download</span> Visit
-                                </button> -->
-                                <button
-                                    class="flex items-center gap-1 px-3 py-1.5 bg-primary rounded-md text-[10px] text-white">
-                                    <span class="material-symbols-outlined text-[14px]">share</span> Share
-                                </button>
-                            </div>
-                        </div>
-                        <hr class="border-slate-800 mb-4" />
-                        <h4 class="text-primary text-[10px] font-bold uppercase tracking-widest mb-1" data-i18n="projects.ecomerce.name"></h4>
-                        <p class="text-slate-400 text-sm mb-4" data-i18n="projects.ecomerce.description"></p>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech1"></span>
-                            <span
-                                class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech2"></span>
-                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech3">
-                                Design</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="carrousel-item min-w-full snap-center bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden">
-                    <div class="relative w-full aspect-video">
-                        <div class="w-full h-full bg-center bg-no-repeat bg-cover"
-                            style='background-image: url("./assets/Ecommerce.jpg");'>
-                        </div>
-                        <div class="absolute inset-0 flex items-center justify-between px-4">
-                            <button data-action="prev" class="bg-black/40 text-white rounded-full p-1"><span
-                                    class="material-symbols-outlined">chevron_left</span></button>
-                            <button data-action="next" class="bg-black/40 text-white rounded-full p-1"><span
-                                    class="material-symbols-outlined">chevron_right</span></button>
-                        </div>
-                    </div>
-                    <div class="p-5">
-                        <div class="flex justify-between items-center mb-4">
-                            <h3 class="text-white font-bold text-sm" data-i18n="projects.ecomerce.title">aaaaa</h3>
-                            <div class="flex gap-2">
-                                <!-- <button
-                                    class="flex items-center gap-1 px-3 py-1.5 bg-slate-800 rounded-md text-[10px] text-white">
-                                    <span class="material-symbols-outlined text-[14px]">download</span> Visit
-                                </button> -->
-                                <button
-                                    class="flex items-center gap-1 px-3 py-1.5 bg-primary rounded-md text-[10px] text-white">
-                                    <span class="material-symbols-outlined text-[14px]">share</span> Share
-                                </button>
-                            </div>
-                        </div>
-                        <hr class="border-slate-800 mb-4" />
-                        <h4 class="text-primary text-[10px] font-bold uppercase tracking-widest mb-1" data-i18n="projects.ecomerce.name"></h4>
-                        <p class="text-slate-400 text-sm mb-4" data-i18n="projects.ecomerce.description"></p>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech1"></span>
-                            <span
-                                class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech2"></span>
-                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech3">
-                                Design</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="carrousel-item min-w-full snap-center bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden">
-                    <div class="relative w-full aspect-video">
-                        <div class="w-full h-full bg-center bg-no-repeat bg-cover"
-                            style='background-image: url("./assets/Ecommerce.jpg");'>
-                        </div>
-                        <div class="absolute inset-0 flex items-center justify-between px-4">
-                            <button data-action="prev" class="bg-black/40 text-white rounded-full p-1"><span
-                                    class="material-symbols-outlined">chevron_left</span></button>
-                            <button data-action="next" class="bg-black/40 text-white rounded-full p-1"><span
-                                    class="material-symbols-outlined">chevron_right</span></button>
-                        </div>
-                    </div>
-                    <div class="p-5">
-                        <div class="flex justify-between items-center mb-4">
-                            <h3 class="text-white font-bold text-sm" data-i18n="projects.ecomerce.title">aaaaa</h3>
-                            <div class="flex gap-2">
-                                <!-- <button
-                                    class="flex items-center gap-1 px-3 py-1.5 bg-slate-800 rounded-md text-[10px] text-white">
-                                    <span class="material-symbols-outlined text-[14px]">download</span> Visit
-                                </button> -->
-                                <button
-                                    class="flex items-center gap-1 px-3 py-1.5 bg-primary rounded-md text-[10px] text-white">
-                                    <span class="material-symbols-outlined text-[14px]">share</span> Share
-                                </button>
-                            </div>
-                        </div>
-                        <hr class="border-slate-800 mb-4" />
-                        <h4 class="text-primary text-[10px] font-bold uppercase tracking-widest mb-1" data-i18n="projects.ecomerce.name"></h4>
-                        <p class="text-slate-400 text-sm mb-4" data-i18n="projects.ecomerce.description"></p>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech1"></span>
-                            <span
-                                class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech2"></span>
-                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.ecomerce.tech3">
-                                Design</span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.googledb.tech1"></span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.googledb.tech2"></span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.googledb.tech3"></span>
+                            <span class="px-2 py-0.5 border border-slate-700 rounded text-[9px] text-slate-300" data-i18n="projects.googledb.tech4"></span>
                         </div>
                     </div>
                 </div>
@@ -452,49 +435,50 @@
                 <button class="dot w-2 h-2 rounded-full bg-slate-700" data-index="1"></button>
                 <button class="dot w-2 h-2 rounded-full bg-slate-700" data-index="2"></button>
                 <button class="dot w-2 h-2 rounded-full bg-slate-700" data-index="3"></button>
-                <button class="dot w-2 h-2 rounded-full bg-slate-700" data-index="4"></button>
             </div>
         </div>
     </section>
 
-    <footer class="bg-white py-16 px-6">
-        <div class="max-w-xl mx-auto">
-            <div class="flex flex-col items-center gap-8">
-                <div class="flex flex-col items-center gap-4 w-full">
-                    <div class="flex items-center gap-3 text-[#0f172a] hover:text-primary transition-colors">
-                        <div
-                            class="size-10 flex items-center justify-center border border-slate-200 rounded-full shrink-0">
-                            <span class="material-symbols-outlined text-slate-400">mail</span>
+    <section id="Contact" class="bg-white py-16 px-6">
+        <footer class="bg-white py-16 px-6">
+            <div class="max-w-xl mx-auto">
+                <div class="flex flex-col items-center gap-8">
+                    <div class="flex flex-col items-center gap-4 w-full">
+                        <div class="flex items-center gap-3 text-[#0f172a] hover:text-primary transition-colors">
+                            <div
+                                class="size-10 flex items-center justify-center border border-slate-200 rounded-full shrink-0">
+                                <span class="material-symbols-outlined text-slate-400">mail</span>
+                            </div>
+                            <a class="text-lg font-bold"
+                                href="mailto:alan.daniel.casella@gmail.com">alan.daniel.casella@gmail.com</a>
                         </div>
-                        <a class="text-lg font-bold"
-                            href="mailto:alan.daniel.casella@gmail.com">alan.daniel.casella@gmail.com</a>
-                    </div>
-                    <div class="flex items-center gap-3 text-[#0f172a]">
-                        <div
-                            class="size-10 flex items-center justify-center border border-slate-200 rounded-full shrink-0">
-                            <span class="material-symbols-outlined text-slate-400">call</span>
+                        <div class="flex items-center gap-3 text-[#0f172a]">
+                            <div
+                                class="size-10 flex items-center justify-center border border-slate-200 rounded-full shrink-0">
+                                <span class="material-symbols-outlined text-slate-400">call</span>
+                            </div>
+                            <span class="text-lg font-bold">+54 (11) 4091-2932</span>
                         </div>
-                        <span class="text-lg font-bold">+54 (11) 4091-2932</span>
                     </div>
-                </div>
-                <div class="flex gap-4 w-full">
-                    <a class="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-slate-50 border border-slate-200 rounded-xl text-[#0f172a] font-bold text-sm transition-all hover:bg-slate-100 active:scale-95 shadow-sm"
-                        target="_blank" href="https://www.linkedin.com/in/alancasella/">
-                        <span class="material-symbols-outlined text-lg">link</span>
-                        LinkedIn
-                    </a>
-                    <a class="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-[#0f172a] text-white rounded-xl font-bold text-sm transition-all hover:bg-slate-800 active:scale-95 shadow-sm"
-                        target="_blank" href="https://github.com/AlanCasella">
-                        <span class="material-symbols-outlined text-lg">code</span>
-                        GitHub
-                    </a>
-                </div>
-                <div class="pt-12 border-t border-slate-100 w-full text-center">
-                    <p class="text-slate-400 text-xs">© 2026 Alan Casella. Built with precision and passion.</p>
+                    <div class="flex gap-4 w-full">
+                        <a class="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-slate-50 border border-slate-200 rounded-xl text-[#0f172a] font-bold text-sm transition-all hover:bg-slate-100 active:scale-95 shadow-sm"
+                            target="_blank" href="https://www.linkedin.com/in/alancasella/">
+                            <span class="material-symbols-outlined text-lg">link</span>
+                            LinkedIn
+                        </a>
+                        <a class="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-[#0f172a] text-white rounded-xl font-bold text-sm transition-all hover:bg-slate-800 active:scale-95 shadow-sm"
+                            target="_blank" href="https://github.com/AlanCasella">
+                            <span class="material-symbols-outlined text-lg">code</span>
+                            GitHub
+                        </a>
+                    </div>
+                    <div class="pt-12 border-t border-slate-100 w-full text-center">
+                        <p class="text-slate-400 text-xs">© 2026 Alan Casella. Built with precision and passion.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </section>
     <script type="module" src="/js/script.js"></script>
 </body>
 
